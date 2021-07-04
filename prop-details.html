@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy and Sell</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -56,27 +56,38 @@
             </div>
         </div>
     </div>
-
-    <header id="header">
-        <div class="container d-flex justify-content-between">
-            <div class="logo">
-                <a class="navbar-brand" href="index.html"><img src="../assets/Images/logo.png" alt="logo" /></a>
-            </div>
-            <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="property.html">Properties</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html"><img src="../assets/Images/logo1.png" alt="logo" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-menu collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="property.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="form.html" class=" top-bar-btn talk-btn  ">
+                    APPLY NOW
+                </a>
             </nav>
-            <a href="form.html" class=" top-bar-btn talk-btn  ">
-                Apply Now
-            </a>
-        </div>
         </div>
     </header>
-
     <section>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner lightbox">
@@ -89,7 +100,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-12">
                                     <img src="assets/images/col1.png" style="width: 100%;"
-                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" />
+                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" />
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-12">
                                     <img src="assets/images/col2.png" style="width: 100%;" />
@@ -351,7 +362,7 @@
             <a href="form.html" class="all-prop-btn">GET IN TOUCH &emsp;<i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
-    
+
     <section>
         <section>
             <div class="container my-5">
@@ -361,80 +372,89 @@
                 </div>
                 <div class="row mb-4">
                     <div class="col-md-4 col-sm-12 col-12">
-                        <div class="prop-card">
-                            <img src="assets/images/building1.png" />
-                            <div class="prop-card-body">
-                                <h2>Building: 123 on the Park</h2>
-                                <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA</p>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                        <a href="prop-details.html">
+                            <div class="prop-card">
+                                <img src="assets/images/building1.png" />
+                                <div class="prop-card-body">
+                                    <h2>Building: 123 on the Park</h2>
+                                    <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA
+                                    </p>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
-                                    </div>
-                                </div>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
-                                    </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-parking"></i> 2 Cars</li>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-parking"></i> 2 Cars</li>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-sm-12 col-12">
-                        <div class="prop-card">
-                            <img src="assets/images/building1.png" />
-                            <div class="prop-card-body">
-                                <h2>Building: 123 on the Park</h2>
-                                <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA</p>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                        <a href="prop-details.html">
+                            <div class="prop-card">
+                                <img src="assets/images/building1.png" />
+                                <div class="prop-card-body">
+                                    <h2>Building: 123 on the Park</h2>
+                                    <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA
+                                    </p>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
-                                    </div>
-                                </div>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
-                                    </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-parking"></i> 2 Cars</li>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-parking"></i> 2 Cars</li>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-4 col-sm-12 col-12">
-                        <div class="prop-card">
-                            <img src="assets/images/building1.png" />
-                            <div class="prop-card-body">
-                                <h2>Building: 123 on the Park</h2>
-                                <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA</p>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                        <a href="prop-details.html">
+                            <div class="prop-card">
+                                <img src="assets/images/building1.png" />
+                                <div class="prop-card-body">
+                                    <h2>Building: 123 on the Park</h2>
+                                    <p><i class="fas fa-map-marker-alt"></i> 2150 S Jones Blvd, Las Vegas, NV 89146, USA
+                                    </p>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-ruler-combined"></i> 1200 SQ FT</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-sink"></i> 2 Bathrooms</li>
+                                    <div class="prop-feature row">
+                                        <div class="col-6">
+                                            <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
+                                        </div>
+                                        <div class="col-6">
+                                            <li><i class="fas fa-parking"></i> 2 Cars</li>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="prop-feature row">
-                                    <div class="col-6">
-                                        <li><i class="fas fa-bed"></i> 4 Bedrooms</li>
-                                    </div>
-                                    <div class="col-6">
-                                        <li><i class="fas fa-parking"></i> 2 Cars</li>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -464,9 +484,8 @@
                             <div class="fotter-link" style="display: flex; flex-direction: column;">
                                 <a href="#">Home</a>
                                 <a href="#">About</a>
-                                <a href="#">For Rent</a>
-                                <a href="#">For Sale</a>
-                                <a href="#">New</a>
+                                <a href="#">Property</a>
+                                <a href="#">Contact</a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-12 col-12">
@@ -507,10 +526,17 @@
                 <p>Copyright © 2021 | Q3G India Pvt. Ltd. All rights reserved</p>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-            <script src="assets/js/main.js"></script>
+        <!-- <script src="/assets/js/main.js"></script>
+       -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script> -->
 
 </body>
 
