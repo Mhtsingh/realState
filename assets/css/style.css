@@ -7,9 +7,9 @@ a{
   text-decoration: none;
   color: #000;
 }
-a:hover{
-  color: none;
-}
+/* .card a:hover{
+  color: #FF5A3C;;
+} */
 .vLine {
     border-left: 6px solid #FF5A3C;
   }
@@ -210,6 +210,9 @@ a:hover{
     font-size: 20px;
     font-weight: bold;
   }
+  .rounded-btn:hover {
+    color: #fff;
+  }
   .rounded-btn2 {
     background: #FF5A3C;
     /* border-radius: 6px; */
@@ -221,6 +224,9 @@ a:hover{
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
+  }
+  .rounded-btn2:hover {
+    color: #fff;
   }
 
   .filter{
@@ -1001,3 +1007,4 @@ input::-webkit-inner-spin-button {
     background: #ccccce;
   }
 } */
+
