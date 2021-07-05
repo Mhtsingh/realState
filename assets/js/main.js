@@ -1,54 +1,72 @@
-$('#myCarousel').carousel({
-  interval: false
-});
-$('#carousel-thumbs').carousel({
-  interval: false
-});
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
 
-// handles the carousel thumbnails
-// https://stackoverflow.com/questions/25752187/bootstrap-carousel-with-thumbnails-multiple-carousel
-$('[id^=carousel-selector-]').click(function() {
-  var id_selector = $(this).attr('id');
-  var id = parseInt( id_selector.substr(id_selector.lastIndexOf('-') + 1) );
-  $('#myCarousel').carousel(id);
-});
-// Only display 3 items in nav on mobile.
-if ($(window).width() < 575) {
-  $('#carousel-thumbs .row div:nth-child(4)').each(function() {
-    var rowBoundary = $(this);
-    $('<div class="row mx-0">').insertAfter(rowBoundary.parent()).append(rowBoundary.nextAll().addBack());
-  });
-  $('#carousel-thumbs .carousel-item .row:nth-child(even)').each(function() {
-    var boundary = $(this);
-    $('<div class="carousel-item">').insertAfter(boundary.parent()).append(boundary.nextAll().addBack());
-  });
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
 }
-// Hide slide arrows if too few items.
-if ($('#carousel-thumbs .carousel-item').length < 2) {
-  $('#carousel-thumbs [class^=carousel-control-]').remove();
-  $('.machine-carousel-container #carousel-thumbs').css('padding','0 5px');
-}
-// when the carousel slides, auto update
-$('#myCarousel').on('slide.bs.carousel', function(e) {
-  var id = parseInt( $(e.relatedTarget).attr('data-slide-number') );
-  $('[id^=carousel-selector-]').removeClass('selected');
-  $('[id=carousel-selector-'+id+']').addClass('selected');
-});
-// when user swipes, go next or previous
-$('#myCarousel').swipe({
-  fallbackToMouseEvents: true,
-  swipeLeft: function(e) {
-    $('#myCarousel').carousel('next');
-  },
-  swipeRight: function(e) {
-    $('#myCarousel').carousel('prev');
-  },
-  allowPageScroll: 'vertical',
-  preventDefaultEvents: false,
-  threshold: 75
-});
 
-$('#myCarousel .carousel-item img').on('click', function(e) {
-  var src = $(e.target).attr('data-remote');
-  if (src) $(this).ekkoLightbox();
-});
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}

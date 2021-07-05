@@ -961,6 +961,9 @@ input::-webkit-inner-spin-button {
         text-align: center;
         margin-top: 7px;
       }
+      .desktop-form{
+        display: none;
+      }
 }
 
 @media screen and (max-width: 600px) {
@@ -992,19 +995,64 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
 }
 }
-/* @media all and (max-width: 767px) {
-  .carousel-container #carousel-thumbs img {
-    border-width: 3px;
-  }
-} */
+
 @media all and (min-width: 576px) {
   .carousel-container #carousel-thumbs {
     position: absolute;
   }
 }
-/* @media all and (max-width: 576px) {
-  .carousel-container #carousel-thumbs {
-    background: #ccccce;
-  }
-} */
 
+@media all and (min-width: 800px) {
+  .mobile-from{
+    display: none;
+  }
+}
+.tab input.invalid {
+  background-color: #ffdddd;
+}
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+.zoomD{
+  cursor: pointer;
+ 
+}
+#lb-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+#lb-back.show {
+  visibility: visible;
+  opacity: 1;
+}

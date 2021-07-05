@@ -104,13 +104,14 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container desktop-form">
         <div class="card my-5 p-3">
             <form autocomplete="off" action="/">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-12">
                         <div class="logo">
-                            <a class="navbar-brand" href="index.html"><img src="../assets/Images/logo1.png" alt="logo"  style=" height: 100px; width: 125px;"/></a>
+                            <a class="navbar-brand" href="index.html"><img src="../assets/Images/logo1.png" alt="logo"
+                                    style=" height: 100px; width: 125px;" /></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 col-12">
@@ -470,20 +471,20 @@
                                 <td><input type="text" class="form-control" id="#"></td>
                                 <td><input type="text" class="form-control" id="#"></td>
                             </tr>
-                          
+
                         </tbody>
-                        
+
                     </table>
                     <table class="table table-bordered">
                         <tbody>
-                        <tr>
-                            <th scope="row">Any other verifiable
-                                income (optional)</th>
-                            <td><input type="text" class="form-control" id="#" placeholder="Amount: $"></td>
-                            <td><input type="text" class="form-control" id="#" placeholder="Frequency"></td>
-                            <td><input type="text" class="form-control" id="#" placeholder="Source"></td>
-                        </tr>
-                    </tbody>
+                            <tr>
+                                <th scope="row">Any other verifiable
+                                    income (optional)</th>
+                                <td><input type="text" class="form-control" id="#" placeholder="Amount: $"></td>
+                                <td><input type="text" class="form-control" id="#" placeholder="Frequency"></td>
+                                <td><input type="text" class="form-control" id="#" placeholder="Source"></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div>
@@ -911,8 +912,80 @@
                 </div>
                 <button class="btn-sale">Submit</button>
             </form>
+            <br>
+            <p>You can also download the form by <a target="_blank" href="assets/JoKy_LLC_Rental_Application.pdf" style="color: #FF5A3C; ;" >clicking </a>here</p>
         </div>
     </div>
+
+    <!-- Mobile form -->
+    <section class="container mobile-from ">
+        <form id="regForm" class=" text-center" action="">
+            <h1>PERSONAL INFORMATION</h1>
+            <p>All Field Mandatory</p>
+            <div class="tab">
+                <p><input type="text" class="form-control" placeholder="First Name" ></p>
+                <p><input type="text" class="form-control" placeholder="Last Name" ></p>
+                <p><input type="text" class="form-control" placeholder="M.I." ></p>
+                <p><input type="date" class="form-control" placeholder="Birth-Date" ></p>
+                <p><input type="text" class="form-control" placeholder="Driver’s License" ></p>          
+                <p><input type="text" class="form-control" placeholder="Social Security" ></p>
+                <p><input type="number" class="form-control" placeholder="Home Phone" ></p>
+                <p><input type="number" class="form-control" placeholder="Work Phone" ></p>
+                <p><input type="number" class="form-control" placeholder="Cell Phone" ></p>  
+                <p><input type="email" class="form-control" placeholder="E-mail..." ></p>
+            </div>
+
+            <div class="tab">
+                <h1>RESIDENCE HISTORY</h1>
+                <p>All Field Mandatory</p>
+                <p><input type="text" class="form-control" placeholder="Street Address" ></p>
+                <p><input type="text" class="form-control" placeholder="City" ></p>
+                <p><input type="text" class="form-control" placeholder="State" ></p>
+                <p><input type="number" class="form-control" placeholder="Zip" ></p>
+                <p><input type="text" class="form-control" placeholder="Rent per Month Paid" ></p>
+                <p><input type="text" class="form-control" placeholder="Owner/Manager Name" ></p>
+                <p><input type="number" class="form-control" placeholder="Phone Number" ></p>
+                <p><input type="text" class="form-control" placeholder="Reason for Leaving" ></p>
+            </div>
+
+            <div class="tab">
+                <h1>EMERGENCY CONTACTS</h1>
+                <p>All Field Mandatory</p>
+                <p><input type="text" class="form-control" placeholder="Name" ></p>
+                <p><input type="text" class="form-control" placeholder="City" ></p>
+                <p><input type="text" class="form-control" placeholder="State" ></p>
+                <p><input type="number" class="form-control" placeholder="Zip" ></p>
+                <p><input type="number" class="form-control" placeholder="Phone Number" ></p>
+
+            </div>
+
+            <div class="tab">
+                <h1>PETS</h1>
+                <p>All Field Mandatory</p>
+                <p><input type="text" class="form-control" placeholder="Name" ></p>
+                <p><input type="text" class="form-control" placeholder="Breed" ></p>
+                <p><input type="text" class="form-control" placeholder="Color" ></p>
+                <p><input type="text" class="form-control" placeholder="Weight" ></p>
+                <p><input type="text" class="form-control" placeholder="Age" ></p>
+            </div>
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" class="btn-sale"  id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" class="btn-sale" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+        </form>
+    </section>
+
     <footer>
         <div class="bg-dark text-white">
             <div class="container ">
@@ -926,10 +999,8 @@
                         <div class="footer-social" style="font-size: 30px;">
                             <a href="#" target="_blank" rel="noopener noreferrer"><i
                                     class="fab fa-facebook-square"></i></a>
-                            <a href="#" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-12 col-12">
@@ -950,7 +1021,6 @@
                             <a href="#">Mortgages</a>
                             <a href="#">Buy</a>
                             <a href="#">Sale</a>
-
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-12 col-12">
@@ -959,7 +1029,6 @@
                             <a href="mailto:support@q3gindia.com"><img src="assets/Images/mail.png" />
                                 support@q3gindia.com</a>
                             <a><img src="assets/Images/india.png" /> +91-628.088.2955</a>
-
                         </div>
                         <br>
                         <h5>NEWS LETTER</h5>
@@ -979,7 +1048,7 @@
             <p>Copyright © 2021 | JoKy LLC All rights reserved</p>
         </div>
     </footer>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="jquery/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -990,13 +1059,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        
-        <script>
-            
-            $( function() {
-              $( "#datepicker" ).datepicker();
-            } );
-            </script>
+
+    <script>
+
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
 </body>
 
 </html>
