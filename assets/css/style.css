@@ -98,7 +98,7 @@ a{
   }
   
   .top-bar-btn{
-    padding: 15px 39px;
+    padding: 9px 39px;
     font-size: 18px;
     background: #FF5A3C;
     color: #fff;
@@ -155,7 +155,7 @@ a{
   }
   .hero-col-left p{
       font-size: 20px;
-      font-weight: 700;
+      /* font-weight: 700; */
   }
 
   .hero-col-left .fa-home{
@@ -203,7 +203,7 @@ a{
     /* border-radius: 6px; */
     color: #fff;
     border: 2px solid #000;
-    padding: 19px 42px;
+    padding: 19px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -421,7 +421,7 @@ a{
 
 .feature-btn{
     background: #084B9B;
-    padding: 5px 9px;
+    padding: 1px 9px;
     color: #fff;
     position: absolute;
     top: 10px;
@@ -432,7 +432,7 @@ a{
 }
 .sale-btn{
     background: #FF5A3C;
-    padding: 5px 15px;
+    padding: 1px 15px;
     color: #fff;
     position: absolute;
     top: 10px;
@@ -453,7 +453,7 @@ a{
   color: #fff;
 }
 .sub-btn{
-  min-height: 42px; 
+  min-height: 40px; 
     min-width: 100px;
     border: 0.1px solid #FF5A3C;
     border-radius: 0 5px 5px 0;
@@ -462,9 +462,9 @@ a{
     font-weight:600;
   }
   .search-btn{
-    padding: 0 44px;
-    min-height: 42px;
-    min-width: 100px;
+    padding: 6px 93px;
+    /* min-height: 42px;
+    min-width: 100px; */
     border: 0.1px solid #FF5A3C;
     border-radius: 0 5px 5px 0;
     background: #FF5A3C;
@@ -486,6 +486,7 @@ a{
 .prop-head-text h2{
     font-size: 54px;
     font-weight: 700;
+    letter-spacing: -2px;
 }
 .prop-head-text p{
     font-size: 21px;
@@ -503,7 +504,7 @@ a{
     display: block;    
 }
 .prop-card-body{
-    padding: 10px;
+    padding: 20px;
 }
 .prop-card:hover{
   transform: scale(1.01);
@@ -912,6 +913,37 @@ input::-webkit-inner-spin-button {
     padding: 12px 9px;
     }
 }
+@media only screen and (width: 1024px) {
+  .rounded-btn2 {
+    font-size: 15px;
+    padding: 9px 19px;
+  }
+  .rounded-btn {
+    font-size: 15px;
+    padding: 9px 19px;
+  }
+  .hero-col-left .main-text {
+    font-size: 30px;
+  }
+  .search-btn{
+    padding: 4px 40px;
+    font-size: 20px;
+  }
+  .about-us-right h2{
+    font-size: 35px;
+  }
+  .about-us-right p{
+    font-size: 16px;
+  }
+  .font-icon i {
+    padding: 24px 9px;
+  }
+  .explore-tab h1 {
+    font-size: 41px;
+  }
+}
+
+
 @media screen and (max-width: 1000px) {
   .font-icon i{
     font-size: 38px;
@@ -933,27 +965,57 @@ input::-webkit-inner-spin-button {
     display: none;
   }
  
+ 
+}
+@media screen and (max-width: 800px) {
+  .desktop-form{
+    display: none;
+  }
+  .explore-tab-wrap{
+    display: none;
+  }
+  .breadcrums{
+    display: none;
+  }
 }
 
-@media screen and (max-width: 800px) {
+
+
+@media only screen and (width: 768px) {
+  .hero-col-left .main-text{
+    font-size: 28px;
+  }
   .grid-column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
-  .rounded-btn {
-    padding: 19px 36px;
+  .rounded-btn, .rounded-btn2 {
+    padding: 11px 17px;
+    font-size: 13px;
     }
+    
   .hero-col-left {
       padding-top: 35px;
       padding-left: 30px;
     }
-    .explore-tab {
-      padding: 20px;
-      }
-      .breadcrums{
-        display: none;
-      }
+    /* .hero_para{
+      display: none;
+    } */
+    .search-btn {
+      padding: 6px 36px;
+      font-size: 12px;
+    }
+    .about-us-right h2 {
+        font-size: 25px;
+    }
+    .about-us-right p{
+      font-size: 14px;
+    }
+    .tab-body h3{
+      font-size: 16px;
+    }
+      
       .about-icon{
         font-size: 20px;
       }
@@ -961,9 +1023,43 @@ input::-webkit-inner-spin-button {
         text-align: center;
         margin-top: 7px;
       }
-      .desktop-form{
-        display: none;
+      
+      .prop-head-text h2 {
+        font-size: 42px;
       }
+      .prop-head-text p {
+        font-size: 18px;
+      }
+      .prop-card p {
+        font-size: 12px;
+      }
+      .prop-card h2 {
+        font-size: 18px;
+      }
+      .footer-div-wrap h5 {
+        font-size: 20px;
+      }
+      .card-text h2 {
+        font-size: 28px;
+      }
+}
+@media screen and (max-width: 736px) {
+  .hero-carosal{
+    display: none;
+  }
+  .rounded-btn2{
+    padding: 19px 26px;
+  }
+  .hero-col-left .main-text {
+    font-size: 60px;
+  }
+   .about-us-right h2 {
+    font-size: 40px;
+  }
+  .prop-head-text h2 {
+    font-size: 47px;
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -978,9 +1074,11 @@ input::-webkit-inner-spin-button {
   .about-us-right h2, .about-exp h2, 
   .prop-head-text h2, .serv-wrap h3
   {
-    font-size: 42px;
+    font-size: 37px;
   }
-  
+  .about-title p {
+    padding-left: 20px;
+  }
   .grid{
     display: none;
   }
@@ -988,9 +1086,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 360px) {
-  .explore-tab-wrap{
-  display: none;
-}
 .about-icon{
   font-size: 20px;
 }
